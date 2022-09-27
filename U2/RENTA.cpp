@@ -1,6 +1,6 @@
 //Axel Emir Saucedo Zermeño
-//U2 EDADES IF
-//23/09/2022
+//U2 PROGRAMA RENTAS
+//27/09/2022
 #include <iostream>
     int main ()
     {

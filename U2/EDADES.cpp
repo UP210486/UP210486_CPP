@@ -1,3 +1,6 @@
+//Axel Emir Saucedo Zermeño
+//U2 EDADES IF
+//23/09/2022
 #include <iostream>
 int main(){
     int e;
@@ -23,5 +26,5 @@ int main(){
          printf("fuera del rango de edades \n");
     }
 
-
+    return 0;
 }

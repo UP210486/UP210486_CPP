@@ -1,7 +1,8 @@
 
-  01-hola mundo  
+  01-hola mundo    
+  ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "HOLA MUNDO".  
 
-    ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "HOLA MUNDO".  
+
   ``` #include <iostream>
 
 int main()
@@ -11,8 +12,10 @@ int main()
 
     return 0;
 }  
-````
-Par o impar  
+````  
+---  
+
+02-Par o impar  
 
   ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "PAR O IMPAR"
 
@@ -23,8 +26,10 @@ int main()
     cout<<"Par o Impar"<<endl<<"\n";
     return 0;
 }    
-```
-Tipos de datos  
+```  
+---  
+
+03-Tipos de datos  
 ESTE PROGRAMA CONSISTE EN LA IMPRESION Y LA EXPLICACION DE COMO IMPRIMIR CADA TIPO DE DATOS EN C++   
   
 ```include <iostream>
@@ -52,9 +57,11 @@ int main()
 
     return 0;
 }  
-```
+```  
+---  
+
   
-Ciclos    
+04-Ciclos    
 ESTE PROGRAMA CONSISTE EN LA IMPRESION DE CICLOS CON IFS PARA LOGRAR LA SUMATORIA DE TODOS LOS NUMEROS ENTRE EL U 1 Y EL 10 Y A LA VEZ TAMBIEN LOS IMPARES Y LOS PARES ENTRE EL MISMO RANGO DE NUMEROS.
 ```#include <iostream>
 using namespace std;
@@ -90,7 +97,8 @@ int main()
     return 0;
 }  
 ```  
-   
+   ---  
+
 Edades      
 ESTE PROGRAMA CONSISTE EN DADA UNA EDAD ASIGNARTE UNA CATEGORIA O RANGO E IMPRIMIRLO, TODO REALIZADO A BASE DE COMANDOS IF.
   

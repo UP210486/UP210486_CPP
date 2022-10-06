@@ -1,18 +1,65 @@
-## Programas unidad 1  
+## Programas unidad 2  
 
-  01-hola mundo    
-  ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "HOLA MUNDO".  
+  # 01-RENTA    
+    
+    ESTE PROGRAMA CONSISTE EN ASIGNARTE UNA CANTIDAD DE IMPUESTOS A PAGAR DEPENDIDENDO DE CUANTO PAGAS DE RENTA AL MES Y TE DA EL PORCENTAJE DE IMPUESTOS A PAGAR.  
 
 
   ``` #include <iostream>
-
-int main()
-{
-
-    std::cout << "HELLO TO MY PERTY WORLD MY FRIENDS\n";
-
-    return 0;
-}  
+    int main ()
+    {
+        int r;
+        int i =0;
+        int ti= 0;
+        printf("¿Cuanto pagas de renta al mes? \n");
+        scanf("%d", &r);
+        if (r<10000)
+        {
+            i= i+r;
+            i=i*0.05;
+            ti=r+i;
+            printf("Usted paga 5 porciento de impuestos\n");
+            printf("La cantidad de impuestos que paga es igual a %d \n",i);
+            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
+        }
+        else if (r<20000 and r>=10000)  
+        {
+            i= i+r;
+            i=i*0.15;
+            ti=r+i;
+            printf("Usted paga 15 porciento de impuestos\n");
+            printf("La cantidad de impuestos que paga es igual a %d \n",i);
+            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
+        }
+        else if (r<35000 and r>=20000)
+        {
+            i= i+r;
+            i=i*0.20;
+            ti=r+i;
+            printf("Usted paga 20 porciento de impuestos\n");
+            printf("La cantidad de impuestos que paga es igual a %d \n",i);
+            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
+        }
+        else if (r<=60000 and r>=35000)
+        {
+            i= i+r;
+            i=i*0.30;
+            ti=r+i;
+            printf("Usted paga 30 porciento de impuestos\n");
+            printf("La cantidad de impuestos que paga es igual a %d \n",i);
+            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
+        }
+        else if (r>60000)
+        {
+            i= i+r;
+            i=i*0.45;
+            ti=r+i;
+            printf("Usted paga 45 porciento de impuestos\n");
+            printf("La cantidad de impuestos que paga es igual a %d \n",i);
+            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
+        }
+        return 0;       
+}
 ````  
 ---  
 

@@ -21,11 +21,11 @@ Comandos para subir archivos a github:
 
 Comandos para bajar archivos de github:
 
-- git clone    
+- git clone "nombre del repositorio"   
 
 </CENTER/>  
 
-## ContEnido :  
+## Contenido :  
 ### U1: Introduccion a la programacion
 ### U2: Estructuras de control y ciclos
 ### U3: Funciones

@@ -25,7 +25,7 @@ Comandos para bajar archivos de github:
 
 </CENTER/>  
 
-## Contnido :  
+## ContEnido :  
 ### U1: Introduccion a la programacion
 ### U2: Estructuras de control y ciclos
 ### U3: Funciones

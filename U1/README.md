@@ -1,7 +1,10 @@
 ## Programas unidad 1  
 
   # 01-hola mundo    
-  ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "HOLA MUNDO".  
+  ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "HOLA MUNDO".    
+  <div align="center">
+  <img alt="01_U1" src='imagenes/01_U1.png' width='1050' />
+  </div>  
 
 
   ``` #include <iostream>
@@ -15,12 +18,17 @@ int main()
 }  
 ````  
 ---    
-# 02-Par o impar  
+# 02-Par o impar    
+<div align="center">
+  <img alt="01_U1" src='imagenes/01_U1.png' width='1050' />
+  </div>  
 
 
-  ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "PAR O IMPAR"
 
-  ```#include <iostream>
+  ESTE PROGRAMA CONSISTE EN LA IMPRESION DE LA FRASE "PAR O IMPAR"  
+
+
+  ```  #include <iostream>
     using namespace std;
 int main()
 {
@@ -32,6 +40,9 @@ int main()
 
 # 03-Tipos de datos  
 ESTE PROGRAMA CONSISTE EN LA IMPRESION Y LA EXPLICACION DE COMO IMPRIMIR CADA TIPO DE DATOS EN C++   
+<div align="center">
+  <img alt="03_U1" src='imagenes/03_U1.png' width='1050' />
+  </div>    
   
 ```include <iostream>
 #include <stdio.h>
@@ -62,7 +73,11 @@ int main()
 ---  
   
 # 04-Ciclos    
-ESTE PROGRAMA CONSISTE EN LA IMPRESION DE CICLOS CON IFS PARA LOGRAR LA SUMATORIA DE TODOS LOS NUMEROS ENTRE EL U 1 Y EL 10 Y A LA VEZ TAMBIEN LOS IMPARES Y LOS PARES ENTRE EL MISMO RANGO DE NUMEROS.
+ESTE PROGRAMA CONSISTE EN LA IMPRESION DE CICLOS CON IFS PARA LOGRAR LA SUMATORIA DE TODOS LOS NUMEROS ENTRE EL U 1 Y EL 10 Y A LA VEZ TAMBIEN LOS IMPARES Y LOS PARES ENTRE EL MISMO RANGO DE NUMEROS.    
+<div align="center">
+  <img alt="04_U1" src='imagenes/04_U1.png' width='1050' />
+  </div>
+
 ```#include <iostream>
 using namespace std;
 
@@ -100,7 +115,12 @@ int main()
    ---  
 
 # 05-Edades      
-ESTE PROGRAMA CONSISTE EN DADA UNA EDAD ASIGNARTE UNA CATEGORIA O RANGO E IMPRIMIRLO, TODO REALIZADO A BASE DE COMANDOS IF.
+ESTE PROGRAMA CONSISTE EN DADA UNA EDAD ASIGNARTE UNA CATEGORIA O RANGO E IMPRIMIRLO, TODO REALIZADO A BASE DE COMANDOS IF.    
+<div align="center">
+  <img alt="05_U1" src='imagenes/05_U1.png' width='1050' />
+  </div>
+
+
   
   ```#include <iostream>
 int main(){

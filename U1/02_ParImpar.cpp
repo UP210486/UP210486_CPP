@@ -1,5 +1,5 @@
 #include <iostream>
-    ing namespace std;
+using namespace std;
 int main()
 {
     cout<<"Par o Impar"<<endl<<"\n";

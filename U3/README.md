@@ -2,357 +2,342 @@
 
   # 01-BISECCION     
     
-    ESTE PROGRAMA CONSISTE EN ASIGNARTE UNA CANTIDAD DE IMPUESTOS A PAGAR DEPENDIDENDO DE CUANTO PAGAS DE RENTA AL MES Y TE DA EL PORCENTAJE DE IMPUESTOS A PAGAR.    
-     <div align="center">
-  <img alt="01_U2" src='imagenes/01_U2.png' width='1050' />
+    THIS PROGRAM DO A BISSECTION.  
+          
+
+  <img alt="01" src='imagenes/01.png' width='1050' />
   </div>  
 
 
   ``` #include <iostream>
-    int main ()
-    {
-        int r;
-        int i =0;
-        int ti= 0;
-        printf("¿Cuanto pagas de renta al mes? \n");
-        scanf("%d", &r);
-        if (r<10000)
-        {
-            i= i+r;
-            i=i*0.05;
-            ti=r+i;
-            printf("Usted paga 5 porciento de impuestos\n");
-            printf("La cantidad de impuestos que paga es igual a %d \n",i);
-            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
+#include <cmath>
+using namespace std;
+
+double FuncionEcuacion1(double x){
+    return (pow(x,2)-8*x+15);
+}
+
+int main(){
+    double x1=-10;
+    double x2=4.5;
+    double xm,y1,y2;
+
+    double Es=0.00001;
+    double Er=abs(x2-x1);
+    
+    int i=1;
+    while (Er>Es){
+        xm=(x1+x2)/2;
+        y1=FuncionEcuacion1(x1);
+        y2=FuncionEcuacion1(xm);
+        if (y1*y2 <0 ){
+            x2=xm;
+        } else {
+            x1=xm;
         }
-        else if (r<20000 and r>=10000)  
-        {
-            i= i+r;
-            i=i*0.15;
-            ti=r+i;
-            printf("Usted paga 15 porciento de impuestos\n");
-            printf("La cantidad de impuestos que paga es igual a %d \n",i);
-            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
-        }
-        else if (r<35000 and r>=20000)
-        {
-            i= i+r;
-            i=i*0.20;
-            ti=r+i;
-            printf("Usted paga 20 porciento de impuestos\n");
-            printf("La cantidad de impuestos que paga es igual a %d \n",i);
-            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
-        }
-        else if (r<=60000 and r>=35000)
-        {
-            i= i+r;
-            i=i*0.30;
-            ti=r+i;
-            printf("Usted paga 30 porciento de impuestos\n");
-            printf("La cantidad de impuestos que paga es igual a %d \n",i);
-            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
-        }
-        else if (r>60000)
-        {
-            i= i+r;
-            i=i*0.45;
-            ti=r+i;
-            printf("Usted paga 45 porciento de impuestos\n");
-            printf("La cantidad de impuestos que paga es igual a %d \n",i);
-            printf("La cantidad del pago de renta con impuestos que paga es igual a %d \n",ti);
-        }
-        return 0;       
+        Er=abs(x2-x1);
+        i=i+1;
+    }
+    cout<<"i = "<<i<<" raiz = "<<xm<<endl;
+    cout<<"... Hecho">> endl;
+    return 0;
 }
 ```  
 ---  
 
-## 02-FUNCION GRADOS A RADIANES   
+## 02-LEAP YEAR 
 
 
- Progama que me dice cuanta bonificacion de dinero ganare dependiendo de mi rendimiento y me dice que nilvel de rendimiento tengo    
+THIS PROGRAM ASK THE USER ONE YEAR AND THEN THE PROGRAMS SAYS IF THE YEAR IS A LEAP YEAR OR NO.
 
-   <img alt="01_U2" src='imagenes/02_U2.png' width='1050' />
-  </div>  
+   <img alt="02.1" src='imagenes/02.1.png' width='1050' />
+  </div>   
+    
+<img alt="02.2" src='imagenes/02.2.png' width='1050' />
+  </div> 
 
-  ```#include <iostream>
-int main()
-{
-    float e;
-    int b = 2400;
-    int binificacion = 0;
-    printf("¿Que nivel de rendimiento tienes? \n");
-    scanf("%f", &e);
-    if (e == 0.0)
-    {
-        printf("Tu nivel de rendimiento es inaceptable \n");
-        binificacion = b * e;
-        printf("La cantidad de dinero que recibiras como bonificacion sera %d \n", binificacion);
-    }
-    else if (e == 0.4)
-    {
-        printf("Tu nivel de rendimiento es aceptable \n");
-        binificacion = b * e;
-        printf("La cantidad de dinero que recibiras como bonificacion sera %d \n", binificacion);
-    }
-    else if (e >= 0.6)
-    {
-        printf("Tu nivel de rendimiento es meritorio \n");
-        binificacion = b * e;
-        printf("La cantidad de dinero que recibiras como bonificacion sera %d \n", binificacion);
-    }
-    else
-    {
-        printf("Numero fuera de los rangos \n");
-    }
+  ```  
+    
+    #include <iostream>
+using namespace std;
+
+bool Leap(int year){
+    bool r;
+    r = year%400==0 || year%4==0 && year%100!=0;
+    return r;
+}
+
+int main(){
+int year;
+cout<<"Give me a year: " << endl;
+cin>>year;
+if(Leap(year)){
+    cout<<year<<" is a leap year";
+} else{
+    cout<<year<<" isnt a leap year";
+}
+return 0;
 }
 ```  
 ---  
 
-## 03-AÑO BISIESTO
-Escribir un programa para una empresa que tiene salas de juegos para todas las edades y
-quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El
-programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si
-el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar $5 y
-si es mayor de 18 años, $10     
-<img alt="03_U2" src='imagenes/03_U2.png' width='1050' />
+## 03- COSINE
+THIS PROGRAM IS GOING TO SHOW THE RESULT OF DE COSINE FUNCTION OF 45 DEGREES.  
+
+<img alt="03" src='imagenes/03.png' width='1050' />
   </div>  
   
 ```#include <iostream>
+#include <math.h>
 using namespace std;
-int main()
-{
+
+double G2R(double g){
+    double r;
+    r=g*M_PI/180;
+    return r;
+}
+
+long int factorial(int x){
+    int factorial=1;
+    while (x>0)
     {
-        int e;
-        printf("¿Que edad tienes? \n");
-        scanf("%d", &e);
-        if (e <= 4)
-        {
-            printf("Puede pasar gratis \n");
-        }
-        else if (e <= 18)
-        {
-            printf("El costo de su entrada son $5 \n");
-        }
-        else
-        {
-            printf("El costo de su entrada son $10 \n");
-        }
+        factorial=factorial*x;
+        x--;
     }
+    return factorial;
+}
+
+double cosine(double g, int i){
+    double c;
+    c=pow(-1,i)*pow(G2R(g),2*i)/(factorial(2*i));
+    return c;
+}
+
+int main(){
+    int g=45;
+    double x1=10;
+    double Es=0.00001;
+    double c=0;
+
+    double Er=x1-c;
+    int i=0;
+
+    while(Er>Es){
+        x1=c;
+        c=c+cosine(g,i);
+        Er=abs(x1-c);
+        i++;
+    }
+    cout<<"The cosine of "<<g<<" degrees is : "<< c << endl;
+    return 0;
 }
 ```  
 ---  
 
   
-## 04-COSENO    
-La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los
-ingredientes para cada tipo de pizza aparecen a continuación.
- Ingredientes vegetarianos: Pimiento y tofu.
- Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
-Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en
-función de su respuesta le muestre un menú con los ingredientes disponibles para que elija.
-Solo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la
-pizzas.
-Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los
-ingredientes que lleva.  
+## 04-POPULATION STANDARD DEVIATION    
+THIS PROGRAM GIVE TO DE USER THE HALF AND THE POPULATION STANDAR DEVIATION OF THE DATAS:  
 
-<img alt="04_U2" src='imagenes/04_U2.png' width='1050' />
+- 600  
+
+- 470  
+
+- 170  
+
+- 430  
+
+- 300  
+  
+
+
+<img alt="04" src='imagenes/04.png' width='1050' />
   </div>   
 
 ```#include <iostream>
+#include <math.h>
 using namespace std;
+
+double half(double x[], int n)
+{
+    double half = 0;
+    for (int i = 0; i < n; i++)
+    {
+        half = half + x[i];
+    }
+    half = half / n;
+    return half;
+}
+
+double deviation(double x[], int n)
+{
+    double h = half(x, n);
+    double dev = 0;
+    for (int i = 0; i < n; i++)
+    {
+        dev = dev + pow(x[i] - h, 2);
+    }
+    dev = sqrt(dev / n);
+    return dev;
+}
+
 int main()
 {
-    int tp;
-    printf("¿Que tipo de pizza quieres, vegetariana o no vegetariana?(1 vegetariana, 2 no vegetariana) \n");
-    scanf("%d", &tp);
-    if (tp == 1)
-    {
-        int nv;
-        printf("¿Con que ingrediente requieres tu pizza?\n");
-        printf("1=Pimienta \n2= tofu ");
-        scanf("%d", &nv);
-        if (nv == 1)
-        {
-            printf("Tu pizza es una vegetariana de pimienta\n");
-            printf("Esta pizza incluy: \n * Salsa de tomate \n * Queso mozzarela \n * Piienta \n");
-        }
-        else if (nv == 2)
-        {
-            printf("Tu pizza es una vegetariana de tofu\n");
-            printf("Esta pizza incluye * Salsa de tomate \n * Queso mozzarela \n * Tofu \n");
-        }
-        else
-        {
-            printf("Tu pizza no tiene ingun ingrediente\n");
-        }
-    }
-    else if (tp == 2)
-    {
-        int nv;
-        printf("¿Con que ingrediente requieres tu pizza?\n");
-        printf("1=Peperoni \n2= Jamon \n3= Salmon \n ");
-        scanf("%d", &nv);
-        if (nv == 1)
-        {
-            printf("Tu pizza es una pizza no vegetariana de Peperoni \n");
-            printf("Esta pizza incluye \n * Salsa de tomate \n * Queso mozzarela \n * Peperoni \n");
-        }
-        else if (nv == 2)
-        {
-            printf("Tu pizza es una pizza no vegetariana de Jamon\n");
-            printf("Esta pizza incluye * \7 Salsa de tomate \n * Queso mozzarela \n * Jamon \n");
-        }
-        else if (nv == 3)
-        {
-            printf("Tu pizza es una pizza no vegetariana de Salmon\n");
-            printf("Esta pizza incluye * Salsa de tomate \n * Queso mozzarela \n * Salmon \n");
-        }
-        else
-        {
-            printf("Tu pizza unicamente lleva \n *Salsa de tomate \n * Queso mozzarela \n");
-        }
-    }
-    else{
-            printf("Tu pizza unicamente lleva \n *Salsa de tomate \n * Queso mozzarela \n");
-        }
-
+    double numeros[] = {600, 470, 170, 430, 300};
+    int n;
+    n = sizeof(numeros) / 8;
+    cout << "Half: " << half(numeros, n) << endl;
+    cout << "Standar deviation: " << deviation(numeros, n) << endl;
+    return 0;
 }
 ```  
    ---  
 
-## 05 DESVIACION ESTANDAR POBLACIONAL      
-Hacer un programa en el que se ingresen 6 temperaturas y determine el promedio, la mas baja y la mas alta   
-<img alt="05_U2" src='imagenes/05_U2.png' width='1050' />
+## 05 CURRENCY BREAKDOWN      
+THIS PROGRAM GIVE DE CHANGE IN BILLS OF 3699 DOLLARS GIVING THE LEAST AMOUNT OF EVERY BILL.
+<img alt="05" src='imagenes/05.png' width='1050' />
   </div>    
 
   
-  ```#include <iostream>
+  ```#include<iostream>
 using namespace std;
-int main()
-{
-    int t;
-    int c = 0;
-    int prom = 0;
-    int tmax = -9999;
-    int tmin = 9999;
-
-    for (int i = 1; i <= 6; i++)
+int main(){
+    int money =3699, i=0;
+    int change[10]={1000,500,200,100,50,20,10,5,2,1};
+    while (money>0)
     {
-        printf("Ingresa la temperatura numero %d \n", i);
-        scanf("%d", &t);
-        c = c + t;
-        if (t >= tmax)
+        if (money>=change[i])
         {
-            tmax = t;
+            cout<<money/change[i]<< " bills of  " <<change[i]<<endl;
+            money=money%change[i];
         }
-        if (t <= tmin)
-        {
-            tmin = t;
-        }
+        i++;
     }
-    prom = c / 6;
-    printf("La temperatura promedio es igual a %d ° \n", prom);
-    printf("La temperatura mayor es igual a %d ° \n",tmax);
-    printf("La temperatura menor es igual a %d ° \n",tmin);
+    return 0;
 }
 ```  
 ---  
 
   
-  ## 06 DESGLOSE DE MONEDA      
-Realizar un programa que lea indefinidamente cantidades de productos y su precio, y al final
-indique el total de la factura. Para saber que se ha terminado con la compra, se deberá
-ingresar un 0 en la cantidad.  
-<img alt="06_U2" src='imagenes/06_U2.png' width='1050' />
+  ## 06 ROMAN NUMBERS      
+THIS PROGRAM GIVE TO THE USER THE ARABIC NUMBER 2022 IN ROMAN NUMBERS.   
+<img alt="06" src='imagenes/06.png' width='1050' />
   </div>    
 
   
   ```#include <iostream>
 using namespace std;
+
 int main()
 {
-    int p;
-    int d;
-    int t = 0;
+    int n = 2022;
+    int v;
+    int roman[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    string RN[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    string number = "";
+    int i = 0;
+    while (n > 0)
+    {
+        if (n >= roman[i])
+        {
+            v = n / roman[i];
+            n = n % roman[i];
+            for (int j = 0; j < v; j++)
+            {
+                number = number + RN[i];
+            }
+        }
+        i++;
+    }
+    cout << number << endl;
+    return 0;
+}
+```  
+---  
+  
+  ## 07 RFC      
+THIS PROGRAM DO THE "RFC" OF THE PEOPLE CLUDED IN THE TABLE GIVENN VY THE TEACHER.
+<img alt="07" src='imagenes/07.png' width='1050' />
+  </div>    
+
+  
+  ```#include <iostream>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main(){
+    string nombre="Juan ";
+    string AP="Jimenez";
+    string AM="Esparza";
+    string fe="03/08/1987";
+    string rfc="";
+    int v=nombre.length(); 
+    int p=0;
+    
+    rfc=rfc+AP[0];
+    for (int i = 1; i < v && p<1; i++)
+    {
+        if (AP[i]=='a' || AP[i]=='e' || AP[i]=='i' || AP[i]=='o' || AP[i]=='u' )
+        {
+            rfc=rfc+AP[i];
+            p++;
+        }  
+    }
+
+    int d1=fe.find_last_of("/");
+    int d2=fe.find("/");
+    rfc=rfc+AM[0]+nombre[0]+fe.substr(d1+1,4)+fe.substr(d2+1,2)+fe.substr(0,2);
+    
+    v=rfc.length();
+    for (int i = 0; i < v; i++)
+    {
+        rfc[i]=toupper(rfc[i]);
+    }
+    cout<<nombre<<" RFC: "<<rfc << endl;
+    return 0;
+}
+```    
+---  
+
+## 08 ORGANIZE ARRAY 
+IN THIS PROGRAM AN ALGORITHM CHECKS ALL THE NUMBERS IN THE ARRAYS AND THEN THIS ALGORITHM ORDER IN AN UPWARD ORDER.
+    
+
+  
+  ```#include <iostream>
+using namespace std;
+
+void ordenar(int x[], int v)
+{
+    int m, s, c;
     do
     {
-        printf("¿Cuantos productos quieres? \n");
-        scanf("%d", &p);
-        if (p != 0 and p > 0)
+        c = 0;
+        for (int i = 0; i < v; i++)
         {
-            printf("¿Cual es el precio de los productos? \n");
-            scanf("%d", &d);
-            t = (d * p);
+            s = i + 1;
+            if (x[i] > x[s])
+            {
+                m = x[s];
+                x[s] = x[i];
+                x[i] = m;
+                c++;
+            }
         }
-        
 
-    } while (p != 0);
-    printf("El precio total de todos los productos es %d \n",t);
+    } while (c > 0);
 }
-```  
----  
-  
-  ## 07 NUMEROS DECIMALES A ROMANOS      
-Realice un programa que realice la conversión de binario a decimal, solo para números
-enteros mayores a 0. El resultado puede ser mostrado mediante una variable entera o en un
-conjunto de caracteres.  
-<img alt="07_U2" src='imagenes/07_U2.png' width='1050' />
-  </div>    
 
-  
-  ```#include <iostream>
-using namespace std;
-#include <stdlib.h>
-int main(){
-    int d,b[999];
-    int i=0;
-    printf("Ingresa tu numero en decimal \n");
-    scanf("%d", &d);
-
-    while (d!=0){
-        b[i] = d % 2;
-        d = d / 2;
-        i++;
+int main()
+{
+    int c[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+    int n = sizeof(c) / 4;
+    ordenar(c, n);
+    for (int i = 0; i < n; i++)
+    {
+        cout << c[i] << endl;
     }
-    i--;
-    printf("Tu numero decimal en binario es igual a: \n"  );
-    while(i>=0){
-        printf("%d",b[i]);
-        i--;
-    }
-
     return 0;
 }
-```  
-## 08 ORDENAR VECTOR    
-Realice un programa que realice la conversión de binario a decimal, solo para números
-enteros mayores a 0. El resultado puede ser mostrado mediante una variable entera o en un
-conjunto de caracteres.  
-<img alt="07_U2" src='imagenes/07_U2.png' width='1050' />
-  </div>    
-
-  
-  ```#include <iostream>
-using namespace std;
-#include <stdlib.h>
-int main(){
-    int d,b[999];
-    int i=0;
-    printf("Ingresa tu numero en decimal \n");
-    scanf("%d", &d);
-
-    while (d!=0){
-        b[i] = d % 2;
-        d = d / 2;
-        i++;
-    }
-    i--;
-    printf("Tu numero decimal en binario es igual a: \n"  );
-    while(i>=0){
-        printf("%d",b[i]);
-        i--;
-    }
-
-    return 0;
 }
 ```  
